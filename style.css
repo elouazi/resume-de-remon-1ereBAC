@@ -1,0 +1,104 @@
+/* الخط العام */
+body {
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* خط أنيق وفخم */
+  background: linear-gradient(to bottom right, #eef2f7, #d9e6f2); /* خلفية هادئة ومريحة */
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #1c1c1c; /* لون نص واضح وراقي */
+}
+
+/* الهيدر */
+header {
+  background: #34495e; /* لون هادئ وراقي */
+  color: #fefefe;
+  padding: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+  border-bottom: 5px solid #2c3e50;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* المحتوى الرئيسي */
+main {
+  margin: 60px auto;
+  width: 85%;
+  max-width: 950px;
+}
+
+/* اختيار الأزرار */
+.choice {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 35px 0;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 16px 32px;
+  border: none;
+  background: #e67e22; /* لون جذاب وراقي */
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  box-shadow: 2px 6px 15px rgba(0,0,0,0.25);
+  letter-spacing: 1px;
+}
+
+button:hover {
+  background: #d35400;
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 2px 8px 20px rgba(0,0,0,0.35);
+}
+
+/* صندوق résumé */
+.resume {
+  background: #ffffff;
+  padding: 40px;
+  margin-top: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  text-align: justify;
+  line-height: 1.9;
+  font-size: 20px;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  border-left: 6px solid #e67e22; /* تأثير أنيق للجانب */
+}
+
+.resume h2 {
+  color: #e67e22;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* زر الرجوع */
+a button {
+  margin-top: 25px;
+  background: #3498db;
+}
+
+a button:hover {
+  background: #21618c;
+  transform: translateY(-3px) scale(1.03);
+}
+
+/* تحسين النصوص الصغيرة */
+p {
+  font-size: 19px;
+  line-height: 1.8;
+}
+
+/* تأثير subtle hover على résumé */
+.resume:hover {
+  transform: scale(1.02);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
