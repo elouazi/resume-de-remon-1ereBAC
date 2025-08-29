@@ -102,3 +102,44 @@ p {
   transform: scale(1.02);
   box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
+
+/* شكل خاص لصفحة الرواية */
+.livre {
+  background: #fff;
+  padding: 40px;
+  margin: 30px auto;
+  max-width: 800px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  text-align: justify;
+  line-height: 1.9;
+  font-size: 18px;
+  font-family: 'Georgia', serif;
+}
+
+/* العناوين */
+.livre h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 28px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #e67e22;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+/* chapitre */
+.chapitre {
+  font-weight: bold;
+  color: #1f78c1;
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+/* الفقرات */
+.livre p {
+  margin-bottom: 15px;
+  text-indent: 20px;
+}
