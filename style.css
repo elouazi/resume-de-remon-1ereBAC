@@ -1,136 +1,163 @@
-/* الخط العام */
+/* ====== الخطوط والخلفية Dark Mode مع انسيابية ====== */
 body {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* خط أنيق وفخم */
-  background: linear-gradient(to bottom right, #eef2f7, #d9e6f2); /* خلفية هادئة ومريحة */
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  background: linear-gradient(135deg, #1b1b1b, #2d2d2d);
   margin: 0;
   padding: 0;
   text-align: center;
-  color: #1c1c1c; /* لون نص واضح وراقي */
+  color: #f0f0f0;
+  overflow-x: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
 }
 
-/* الهيدر */
+/* ====== الهيدر ====== */
 header {
-  background: #34495e; /* لون هادئ وراقي */
+  background: #121212;
   color: #fefefe;
-  padding: 30px;
-  font-size: 28px;
+  padding: 40px 20px;
+  font-size: 32px;
   font-weight: bold;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  border-bottom: 5px solid #2c3e50;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  letter-spacing: 1.5px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  border-bottom: 5px solid #333;
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.6);
 }
 
-/* المحتوى الرئيسي */
+/* ====== المحتوى الرئيسي ====== */
 main {
-  margin: 60px auto;
-  width: 85%;
-  max-width: 950px;
+  margin: 80px auto;
+  width: 90%;
+  max-width: 1000px;
 }
 
-/* اختيار الأزرار */
+/* ====== اختيار الزرار ====== */
 .choice {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  margin: 35px 0;
+  gap: 25px;
+  margin: 45px 0;
   flex-wrap: wrap;
 }
 
 button {
-  padding: 16px 32px;
+  padding: 20px 40px;
   border: none;
-  background: #e67e22; /* لون جذاب وراقي */
+  background: linear-gradient(45deg, #e67e22, #f39c12);
   color: #fff;
   font-size: 20px;
   font-weight: bold;
-  border-radius: 15px;
+  border-radius: 25px;
   cursor: pointer;
-  transition: all 0.4s ease;
-  box-shadow: 2px 6px 15px rgba(0,0,0,0.25);
-  letter-spacing: 1px;
+  transition: all 0.5s ease;
+  box-shadow: 3px 8px 20px rgba(0,0,0,0.7);
+  letter-spacing: 1.2px;
+  position: relative;
+  overflow: hidden;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.15);
+  transition: width 0.5s ease;
+  border-radius: 25px;
+}
+
+button:hover::after {
+  width: 100%;
 }
 
 button:hover {
-  background: #d35400;
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 2px 8px 20px rgba(0,0,0,0.35);
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 3px 12px 28px rgba(0,0,0,0.8);
 }
 
-/* صندوق résumé */
+/* ====== résumé صندوق ====== */
 .resume {
-  background: #ffffff;
-  padding: 40px;
-  margin-top: 30px;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  background: #2c2c2c;
+  padding: 50px;
+  margin-top: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
   text-align: justify;
-  line-height: 1.9;
+  line-height: 2.1;
   font-size: 20px;
-  color: #2c3e50;
-  transition: all 0.3s ease;
-  border-left: 6px solid #e67e22; /* تأثير أنيق للجانب */
+  color: #f0f0f0;
+  transition: all 0.4s ease;
+  border-left: 10px solid #e67e22;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
 }
 
 .resume h2 {
   color: #e67e22;
-  font-size: 32px;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
 /* زر الرجوع */
 a button {
-  margin-top: 25px;
-  background: #3498db;
+  margin-top: 30px;
+  background: linear-gradient(45deg, #3498db, #2980b9);
 }
 
 a button:hover {
-  background: #21618c;
-  transform: translateY(-3px) scale(1.03);
+  background: linear-gradient(45deg, #21618c, #1b4f72);
+  transform: translateY(-4px) scale(1.07);
 }
 
-/* تحسين النصوص الصغيرة */
+/* نصوص */
 p {
   font-size: 19px;
-  line-height: 1.8;
+  line-height: 1.95;
 }
 
 /* تأثير subtle hover على résumé */
 .resume:hover {
-  transform: scale(1.02);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.8);
 }
 
-/* شكل خاص لصفحة الرواية */
+/* صفحة الرواية */
 .livre {
-  background: #fff;
-  padding: 40px;
-  margin: 30px auto;
-  max-width: 800px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  background: #1f1f1f;
+  padding: 50px;
+  margin: 40px auto;
+  max-width: 850px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
   text-align: justify;
-  line-height: 1.9;
+  line-height: 2;
   font-size: 18px;
   font-family: 'Georgia', serif;
+  color: #e0e0e0;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.7s;
 }
 
-/* العناوين */
 .livre h2 {
   text-align: center;
-  color: #2c3e50;
-  margin-bottom: 25px;
-  font-size: 28px;
+  color: #e67e22;
+  margin-bottom: 35px;
+  font-size: 32px;
   text-transform: uppercase;
-  border-bottom: 2px solid #e67e22;
+  border-bottom: 3px solid #e67e22;
   display: inline-block;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
-/* chapitre */
 .chapitre {
   font-weight: bold;
   color: #1f78c1;
@@ -138,12 +165,24 @@ p {
   margin-right: 6px;
 }
 
-/* الفقرات */
 .livre p {
-  margin-bottom: 15px;
-  text-indent: 20px;
+  margin-bottom: 20px;
+  text-indent: 25px;
 }
 
+/* إخفاء العناصر */
 .hidden {
   display: none;
+}
+
+/* ====== Animation ====== */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
 }
