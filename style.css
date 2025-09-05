@@ -1,145 +1,210 @@
-/* الخط العام */
+/* ===========================
+   عام - Body
+=========================== */
 body {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif; /* خط أنيق وفخم */
-  background: linear-gradient(to bottom right, #eef2f7, #d9e6f2); /* خلفية هادئة ومريحة */
+  font-family: 'Poppins', 'Palatino Linotype', serif;
   margin: 0;
   padding: 0;
   text-align: center;
-  color: #1c1c1c; /* لون نص واضح وراقي */
+  color: #fff;
+  background: linear-gradient(-45deg, #1d2b64, #f8cdda, #2c3e50, #3498db);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  overflow-x: hidden;
+  transition: all 0.5s ease;
 }
 
-/* الهيدر */
+/* ===========================
+ Animated Background
+=========================== */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ===========================
+ Header
+=========================== */
 header {
-  background: #34495e; /* لون هادئ وراقي */
-  color: #fefefe;
-  padding: 30px;
-  font-size: 28px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-  border-bottom: 5px solid #2c3e50;
-  border-radius: 0 0 20px 20px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.5);
+  padding: 40px 20px;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px rgba(0,0,0,0.5);
+  border-radius: 0 0 30px 30px;
+  animation: slideDown 1.2s ease forwards;
 }
 
-/* المحتوى الرئيسي */
+/* ===========================
+ Animations
+=========================== */
+@keyframes slideDown {
+  0% { transform: translateY(-80px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { transform: translateY(30px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* ===========================
+ Main Content
+=========================== */
 main {
   margin: 60px auto;
-  width: 85%;
+  width: 90%;
   max-width: 950px;
+  animation: fadeInUp 1s ease forwards;
 }
 
-/* اختيار الأزرار */
+/* ===========================
+ Buttons
+=========================== */
 .choice {
   display: flex;
   justify-content: center;
   gap: 30px;
-  margin: 35px 0;
   flex-wrap: wrap;
+  margin: 40px 0;
 }
 
 button {
-  padding: 16px 32px;
+  padding: 18px 40px;
   border: none;
-  background: #e67e22; /* لون جذاب وراقي */
-  color: #fff;
+  border-radius: 25px;
   font-size: 20px;
-  font-weight: bold;
-  border-radius: 15px;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.4s ease;
-  box-shadow: 2px 6px 15px rgba(0,0,0,0.25);
   letter-spacing: 1px;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(255,255,255,0.2);
+  transition: all 0.4s ease;
+}
+
+button:hover::after {
+  width: 100%;
 }
 
 button:hover {
-  background: #d35400;
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 2px 8px 20px rgba(0,0,0,0.35);
+  transform: translateY(-6px) scale(1.1);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.5);
 }
 
-/* صندوق résumé */
+/* ===========================
+ Resume Box
+=========================== */
 .resume {
-  background: #ffffff;
-  padding: 40px;
-  margin-top: 30px;
-  border-radius: 20px;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  background: rgba(0,0,0,0.6);
+  padding: 50px;
+  margin-top: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
   text-align: justify;
-  line-height: 1.9;
+  line-height: 2;
   font-size: 20px;
-  color: #2c3e50;
-  transition: all 0.3s ease;
-  border-left: 6px solid #e67e22; /* تأثير أنيق للجانب */
+  border-left: 10px solid #ff416c;
+  transition: all 0.5s ease, transform 0.4s ease;
+}
+
+.resume:hover {
+  transform: scale(1.05) rotate(-0.5deg);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.45);
 }
 
 .resume h2 {
-  color: #e67e22;
-  font-size: 32px;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  color: #ff416c;
+  font-size: 36px;
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* زر الرجوع */
+/* ===========================
+ Links & Back Button
+=========================== */
 a button {
-  margin-top: 25px;
-  background: #3498db;
+  margin-top: 30px;
+  background: linear-gradient(135deg, #1fa2ff, #12d8fa);
 }
 
 a button:hover {
-  background: #21618c;
-  transform: translateY(-3px) scale(1.03);
+  transform: translateY(-4px) scale(1.07);
+  box-shadow: 0 10px 35px rgba(0,0,0,0.4);
 }
 
-/* تحسين النصوص الصغيرة */
+/* ===========================
+ Paragraphs
+=========================== */
 p {
   font-size: 19px;
-  line-height: 1.8;
+  line-height: 2;
+  color: #f1f1f1;
+  transition: color 0.3s ease;
 }
 
-/* تأثير subtle hover على résumé */
-.resume:hover {
-  transform: scale(1.02);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+p:hover {
+  color: #ff4b2b;
 }
 
-/* شكل خاص لصفحة الرواية */
+/* ===========================
+ Book Page
+=========================== */
 .livre {
-  background: #fff;
-  padding: 40px;
-  margin: 30px auto;
-  max-width: 800px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  background: rgba(0,0,0,0.5);
+  padding: 50px;
+  margin: 40px auto;
+  max-width: 850px;
+  border-radius: 25px;
+  box-shadow: 0 18px 55px rgba(0,0,0,0.3);
   text-align: justify;
-  line-height: 1.9;
-  font-size: 18px;
+  line-height: 2;
+  font-size: 19px;
   font-family: 'Georgia', serif;
+  animation: fadeInUp 1s ease forwards;
 }
 
-/* العناوين */
 .livre h2 {
   text-align: center;
-  color: #2c3e50;
-  margin-bottom: 25px;
-  font-size: 28px;
+  color: #12d8fa;
+  margin-bottom: 35px;
+  font-size: 34px;
   text-transform: uppercase;
-  border-bottom: 2px solid #e67e22;
+  border-bottom: 3px solid #ff416c;
   display: inline-block;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
-/* chapitre */
+/* Chapters */
 .chapitre {
   font-weight: bold;
-  color: #1f78c1;
-  font-size: 18px;
+  color: #f8cdda;
+  font-size: 19px;
   margin-right: 6px;
 }
 
-/* الفقرات */
 .livre p {
-  margin-bottom: 15px;
-  text-indent: 20px;
+  margin-bottom: 20px;
+  text-indent: 25px;
+}
+
+.hidden {
+  display: none;
 }

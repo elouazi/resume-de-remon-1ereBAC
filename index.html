@@ -7,14 +7,21 @@
 </head>
 <body>
   <header>
-    bonjour sur site ismailelouazi / resume de roman 1ere BAC
+    bonjour sur site ismailelouazi de resume de roman 1ere BAC
   </header>
   <main>
-    <p>Choisissez un résumé de roman:</p>
     <div class="choice">
-      <a href="boite.html"><button>Résumé Roman 1 : La boître à merveilles</button></a>
+      <!-- زر واحد بالفرنسية -->
+      <button onclick="showChoices()">🇫🇷 Choisir un résumé</button>
+    </div>
+
+    <!-- الأزرار ديال الروايات (مخفيين في الأول) -->
+    <div id="romanChoices" class="choice hidden">
+      <a href="boite.html"><button>Résumé Roman 1 : La boîte à merveilles</button></a>
       <a href="antigone.html"><button>Résumé Roman 2 : Antigone</button></a>
     </div>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
